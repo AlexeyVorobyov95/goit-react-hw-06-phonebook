@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-
 import { GlobalStyles } from 'components/GlobalStyles';
 import { ContactsList } from 'components/Contacts/ContactsList';
 import { ContactForm } from 'components/Form/Form';
@@ -11,7 +9,6 @@ import { useSelector } from 'react-redux';
 export function App() {
   const contacts = useSelector(getContacts);
   const filter = useSelector(getStatusFilter);
-
 
   const getFilter = contacts.filter(({ name }) =>
     name.toLowerCase().includes(filter.toLowerCase())
