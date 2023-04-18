@@ -12,9 +12,6 @@ export function App() {
   const contacts = useSelector(getContacts);
   const filter = useSelector(getStatusFilter);
 
-  useEffect(() => {
-    window.localStorage.setItem('contacts', JSON.stringify(contacts));
-  }, [contacts]);
 
   const getFilter = contacts.filter(({ name }) =>
     name.toLowerCase().includes(filter.toLowerCase())
